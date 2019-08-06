@@ -1,0 +1,2 @@
+# SyliusBlogPlugin
+Blog plugin
