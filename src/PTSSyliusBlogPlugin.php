@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace PlumTreeSystems\SyliusBlogPlugin;
+namespace PTS\SyliusBlogPlugin;
 
 use Sylius\Bundle\CoreBundle\Application\SyliusPluginTrait;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class PlumTreeSystemsSyliusBlogPlugin extends Bundle
+final class PTSSyliusBlogPlugin extends Bundle
 {
     use SyliusPluginTrait;
 }

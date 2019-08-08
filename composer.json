@@ -1,5 +1,5 @@
 {
-    "name": "plum-tree-systems/sylius-blog-plugin",
+    "name": "pts/sylius-blog-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
     "description": "Plum Tree Systems blog plugin for Sylius.",
@@ -44,8 +44,8 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "PlumTreeSystems\\SyliusBlogPlugin\\": "src/",
-            "Tests\\PlumTreeSystems\\SyliusBlogPlugin\\": "tests/"
+            "PTS\\SyliusBlogPlugin\\": "src/",
+            "Tests\\PTS\\SyliusBlogPlugin\\": "tests/"
         }
     },
     "autoload-dev": {

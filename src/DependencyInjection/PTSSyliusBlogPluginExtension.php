@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PlumTreeSystems\SyliusBlogPlugin\DependencyInjection;
+namespace PTS\SyliusBlogPlugin\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
-final class PlumTreeSystemsSyliusBlogPluginExtension extends Extension
+final class PTSSyliusBlogPluginExtension extends Extension
 {
     /**
      * {@inheritdoc}
