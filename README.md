@@ -4,13 +4,13 @@
     </a>
 </p>
 
-<h1 align="center">Plugin Skeleton</h1>
+<h1 align="center">PTS Sylius Blog Plugin</h1>
 
-<p align="center">Skeleton for starting Sylius plugins.</p>
+<p align="center">Plugin for easy and simple blog in Sylius shop.</p>
 
 ## Installation
 
-1. Run `composer create-project sylius/plugin-skeleton ProjectName`.
+1. Run `composer require pts/sylius-blog-plugin`.
 
 2. From the plugin skeleton root directory, run the following commands:
 

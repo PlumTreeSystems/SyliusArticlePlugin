@@ -1,0 +1,16 @@
+pts_sylius_blog_plugin:
+  driver: doctrine/orm
+#  resources:
+#    article:
+#      classes:
+#        model: PTS\SyliusBlogPlugin\Entity\Article
+#        form: PTS\SyliusBlogPlugin\Form\Type\ArticleType
+#    category:
+#      classes:
+#        model: PTS\SyliusBlogPlugin\Entity\Category
+
+sylius_taxonomy:
+  resources:
+    taxon:
+      classes:
+        controller: PTS\SyliusBlogPlugin\Controller\TaxonController
