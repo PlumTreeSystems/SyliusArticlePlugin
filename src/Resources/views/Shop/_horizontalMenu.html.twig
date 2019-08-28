@@ -17,11 +17,10 @@
 {% endmacro %}
 
 {% macro section(item) %}
-    <a href="{{ path('bitbag_sylius_cms_plugin_shop_section_show', {'code': item.code, '_locale': item.translation.locale}) }}" class="item">{{ item.translation(item.translation.locale).name }}</a>
+    <a href="{{ path('bitbag_sylius_cms_plugin_shop_page_index_by_section_code', {'sectionCode': item.code, '_locale': item.translation.locale}) }}" class="item">{{ item.translation(item.translation.locale).name }}</a>
 {% endmacro %}
 
 {% import _self as macros %}
-        {{ dump() }}
 
 {% if taxons|length > 0 %}
     <div class="ui large stackable menu">
