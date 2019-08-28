@@ -1,4 +1,8 @@
 services:
+  sylius_blog_fixtures:
+    class: PTS\SyliusBlogPlugin\Fixture\BlogFixtures
+
+
 #
 #  pts_sylius_blog_plugin.form.type.article:
 #    class: PTS\SyliusBlogPlugin\Form\Type\ArticleType

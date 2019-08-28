@@ -1,88 +1,36 @@
-<p align="center">
-    <a href="https://sylius.com" target="_blank">
-        <img src="https://demo.sylius.com/assets/shop/img/logo.png" />
-    </a>
-</p>
+## Sylius Blog Plugin
 
-<h1 align="center">PTS Sylius Blog Plugin</h1>
-
-<p align="center">Plugin for easy and simple blog in Sylius shop.</p>
+This plugin allows you to have a blog in your sylius application
 
 ## Installation
 
-1. Run `composer require pts/sylius-blog-plugin`.
+1. Run `composer require plumtreesystems/sylius-blog-plugin`
 
-2. From the plugin skeleton root directory, run the following commands:
+2. Install WYSIWYG editor ([FOS CKEditor](https://symfony.com/doc/master/bundles/FOSCKEditorBundle/usage/ckeditor.html)) 
 
-    ```bash
-    $ (cd tests/Application && yarn install)
-    $ (cd tests/Application && yarn build)
-    $ (cd tests/Application && bin/console assets:install public -e test)
-    
-    $ (cd tests/Application && bin/console doctrine:database:create -e test)
-    $ (cd tests/Application && bin/console doctrine:schema:create -e test)
+    `bin/console ckeditor:install`
+
+3. Add plugin dependencies to your config/bundles.php file:
+   ```
+   return [
+       ...
+       FOS\CKEditorBundle\FOSCKEditorBundle::class => ['all' => true], // WYSIWYG editor
+       SitemapPlugin\SitemapPlugin::class => ['all' => true], // Sitemap support
+       BitBag\SyliusCmsPlugin\BitBagSyliusCmsPlugin::class  => ['all' => true],
+       PTS\SyliusBlogPlugin\PTSSyliusBlogPlugin::class => ['all' => true],
+   ];
+
+4. Import configuration in your `config/packages/_sylius.yaml` file
     ```
+    imports:
+        - { resource: "@PTSSyliusBlogPlugin/Resources/config/config.yml" }
 
-To be able to setup a plugin's database, remember to configure you database credentials in `tests/Application/.env` and `tests/Application/.env.test`.
-
-## Usage
-
-### Running plugin tests
-
-  - PHPUnit
-
-    ```bash
-    $ vendor/bin/phpunit
+5. Import routing in your `config/routes.yaml` file
     ```
+    bitbag_sylius_cms_plugin:
+      resource: "@BitBagSyliusCmsPlugin/Resources/config/routing.yml"
 
-  - PHPSpec
 
-    ```bash
-    $ vendor/bin/phpspec run
-    ```
+## Credits
 
-  - Behat (non-JS scenarios)
-
-    ```bash
-    $ vendor/bin/behat --tags="~@javascript"
-    ```
-
-  - Behat (JS scenarios)
- 
-    1. Download [Chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
-    
-    2. Download [Selenium Standalone Server](https://www.seleniumhq.org/download/).
-    
-    2. Run Selenium server with previously downloaded Chromedriver:
-    
-        ```bash
-        $ java -Dwebdriver.chrome.driver=chromedriver -jar selenium-server-standalone.jar
-        ```
-        
-    3. Run test application's webserver on `localhost:8080`:
-    
-        ```bash
-        $ (cd tests/Application && bin/console server:run localhost:8080 -d public -e test)
-        ```
-    
-    4. Run Behat:
-    
-        ```bash
-        $ vendor/bin/behat --tags="@javascript"
-        ```
-
-### Opening Sylius with your plugin
-
-- Using `test` environment:
-
-    ```bash
-    $ (cd tests/Application && bin/console sylius:fixtures:load -e test)
-    $ (cd tests/Application && bin/console server:run -d public -e test)
-    ```
-    
-- Using `dev` environment:
-
-    ```bash
-    $ (cd tests/Application && bin/console sylius:fixtures:load -e dev)
-    $ (cd tests/Application && bin/console server:run -d public -e dev)
-    ```
+This plugin uses [BitBagSyliusCmsPlugin](https://github.com/BitBagCommerce/SyliusCmsPlugin/)

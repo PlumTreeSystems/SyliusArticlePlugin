@@ -1,10 +1,2 @@
-#imports:
-#  - { resource: "routes/*" }
-
-pts_sylius_blog_plugin_shop:
-  resource: "@PTSSyliusBlogPlugin/Resources/config/routes/blog_shop_routing.yml"
-  prefix: /
-
-pts_sylius_blog_plugin_admin:
-  resource: "@PTSSyliusBlogPlugin/Resources/config/routes/blog_admin_routing.yml"
-  prefix: /
+bitbag_sylius_cms_plugin:
+  resource: "@BitBagSyliusCmsPlugin/Resources/config/routing.yml"
