@@ -1,7 +1,7 @@
 ## Sylius Article Plugin
 
-This plugin is an extention for [BitBagSyliusCmsPlugin](https://github.com/BitBagCommerce/SyliusCmsPlugin/).
-It adds sections to your menu
+This plugin is an extension for [BitBagSyliusCmsPlugin](https://github.com/BitBagCommerce/SyliusCmsPlugin/).
+It adds your created sections to your application's menu
 
 ## Installation
 
@@ -12,7 +12,7 @@ It adds sections to your menu
     `bin/console ckeditor:install`
 
 3. Add plugin dependencies to your config/bundles.php file:
-   ```
+   ```php
    return [
        ...
        FOS\CKEditorBundle\FOSCKEditorBundle::class => ['all' => true], // WYSIWYG editor
@@ -22,12 +22,12 @@ It adds sections to your menu
    ];
 
 4. Import configuration in your `config/packages/_sylius.yaml` file
-    ```
+    ```yaml
     imports:
         - { resource: "@PTSSyliusArticlePlugin/Resources/config/config.yml" }
 
 5. Import routing in your `config/routes.yaml` file
-    ```
+    ```yaml
     pts_sylius_article_plugin:
       resource: "@PTSSyliusArticlePlugin/Resources/config/routes.yaml"
 
