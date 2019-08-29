@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace PTS\SyliusBlogPlugin;
+namespace PTS\SyliusArticlePlugin;
 
-use PTS\SyliusBlogPlugin\DependencyInjection\PTSSyliusBlogPluginExtension;
+use PTS\SyliusArticlePlugin\DependencyInjection\PTSSyliusArticlePluginExtension;
 use Sylius\Bundle\CoreBundle\Application\SyliusPluginTrait;
 use Sylius\Bundle\ResourceBundle\AbstractResourceBundle;
 use Sylius\Bundle\ResourceBundle\ResourceBundleInterface;
 use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
 
-final class PTSSyliusBlogPlugin extends AbstractResourceBundle
+final class PTSSyliusArticlePlugin extends AbstractResourceBundle
 {
     use SyliusPluginTrait;
 
@@ -31,11 +31,11 @@ final class PTSSyliusBlogPlugin extends AbstractResourceBundle
      */
     protected function getModelNamespace(): ?string
     {
-        return 'PTS\SyliusBlogPlugin\Entity';
+        return 'PTS\SyliusArticlePlugin\Entity';
     }
 
     public function getContainerExtension()
     {
-        return new PTSSyliusBlogPluginExtension();
+        return new PTSSyliusArticlePluginExtension();
     }
 }

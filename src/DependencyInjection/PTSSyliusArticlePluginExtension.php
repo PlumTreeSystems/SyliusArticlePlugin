@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PTS\SyliusBlogPlugin\DependencyInjection;
+namespace PTS\SyliusArticlePlugin\DependencyInjection;
 
 use Sylius\Bundle\ResourceBundle\DependencyInjection\Extension\AbstractResourceExtension;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-final class PTSSyliusBlogPluginExtension extends AbstractResourceExtension
+final class PTSSyliusArticlePluginExtension extends AbstractResourceExtension
 {
     /**
      * {@inheritdoc}
@@ -20,8 +20,8 @@ final class PTSSyliusBlogPluginExtension extends AbstractResourceExtension
         $config = $this->processConfiguration($this->getConfiguration([], $container), $config);
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
 
-//        $this->registerResources('pts_sylius_blog_plugin', $config['driver'], $config['resources'], $container);
-        $this->registerResources('pts_sylius_blog_plugin', $config['driver'], [], $container);
+//        $this->registerResources('pts_sylius_article_plugin', $config['driver'], $config['resources'], $container);
+        $this->registerResources('pts_sylius_article_plugin', $config['driver'], [], $container);
 
 //        $configFiles = [
 //            'services.yml',

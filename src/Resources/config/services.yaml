@@ -1,17 +1,12 @@
-services:
-  sylius_blog_fixtures:
-    class: PTS\SyliusBlogPlugin\Fixture\BlogFixtures
-
-
 #
-#  pts_sylius_blog_plugin.form.type.article:
-#    class: PTS\SyliusBlogPlugin\Form\Type\ArticleType
-#    arguments: ['%pts_sylius_blog_plugin.model.article.class%', ["Default"]]
+#  pts_sylius_article_plugin.form.type.article:
+#    class: PTS\SyliusArticlePlugin\Form\Type\ArticleType
+#    arguments: ['%pts_sylius_article_plugin.model.article.class%', ["Default"]]
 #    tags:
 #      - { name: form.type }
 #
-#  pts_sylius_blog_plugin.form.type.category:
-#    class: PTS\SyliusBlogPlugin\Form\Type\CategoryType
-#    arguments: ['%pts_sylius_blog_plugin.model.category.class%', ["Default"]]
+#  pts_sylius_article_plugin.form.type.category:
+#    class: PTS\SyliusArticlePlugin\Form\Type\CategoryType
+#    arguments: ['%pts_sylius_article_plugin.model.category.class%', ["Default"]]
 #    tags:
 #      - { name: form.type }

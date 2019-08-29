@@ -2,15 +2,12 @@
 
 declare(strict_types=1);
 
-namespace PTS\SyliusBlogPlugin\DependencyInjection;
+namespace PTS\SyliusArticlePlugin\DependencyInjection;
 
-use PTS\SyliusBlogPlugin\Form\Type\ArticleType;
-use Sylius\Bundle\ResourceBundle\Controller\ResourceController;
+use PTS\SyliusArticlePlugin\Form\Type\ArticleType;
 use Sylius\Bundle\ResourceBundle\SyliusResourceBundle;
-use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-use Sylius\Component\Resource\Factory\Factory;
 
 final class Configuration implements ConfigurationInterface
 {
@@ -19,12 +16,12 @@ final class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder(): TreeBuilder
     {
-        $treeBuilder = new TreeBuilder('pts_sylius_blog_plugin');
+        $treeBuilder = new TreeBuilder('pts_sylius_article_plugin');
         if (\method_exists($treeBuilder, 'getRootNode')) {
             $rootNode = $treeBuilder->getRootNode();
         } else {
             // BC layer for symfony/config 4.1 and older
-            $rootNode = $treeBuilder->root('pts_sylius_blog_plugin');
+            $rootNode = $treeBuilder->root('pts_sylius_article_plugin');
         }
 
         $rootNode
@@ -58,7 +55,7 @@ final class Configuration implements ConfigurationInterface
 //                                ->arrayNode('classes')
 //                                    ->addDefaultsIfNotSet()
 //                                    ->children()
-//                                        ->scalarNode('model')->defaultValue(\PTS\SyliusBlogPlugin\Entity\Article::class)->cannotBeEmpty()->end()
+//                                        ->scalarNode('model')->defaultValue(\PTS\SyliusArticlePlugin\Entity\Article::class)->cannotBeEmpty()->end()
 //                                        ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
 //                                        ->scalarNode('factory')->defaultValue(Factory::class)->end()
 //                                        ->scalarNode('form')->defaultValue(ArticleType::class)->cannotBeEmpty()->end()
@@ -73,7 +70,7 @@ final class Configuration implements ConfigurationInterface
 //                                ->arrayNode('classes')
 //                                    ->addDefaultsIfNotSet()
 //                                    ->children()
-//                                        ->scalarNode('model')->defaultValue(\PTS\SyliusBlogPlugin\Entity\Category::class)->cannotBeEmpty()->end()
+//                                        ->scalarNode('model')->defaultValue(\PTS\SyliusArticlePlugin\Entity\Category::class)->cannotBeEmpty()->end()
 //                                        ->scalarNode('controller')->defaultValue(ResourceController::class)->cannotBeEmpty()->end()
 //                                        ->scalarNode('factory')->defaultValue(Factory::class)->end()
 //                                    ->end()

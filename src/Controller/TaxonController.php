@@ -1,7 +1,7 @@
 <?php
 
 
-namespace PTS\SyliusBlogPlugin\Controller;
+namespace PTS\SyliusArticlePlugin\Controller;
 
 
 use FOS\RestBundle\View\View;
@@ -33,7 +33,7 @@ class TaxonController extends ResourceController
                 $sections = $sectionRepository->findAll();
 
                 $view
-                    ->setTemplate('@PTSSyliusBlogPlugin/Shop/_horizontalMenu.html.twig')
+                    ->setTemplate('@PTSSyliusArticlePlugin/Shop/_horizontalMenu.html.twig')
                     ->setTemplateVar($this->metadata->getPluralName())
                     ->setData([
                         'configuration' => $configuration,

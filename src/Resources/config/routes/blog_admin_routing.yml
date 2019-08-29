@@ -1,10 +1,10 @@
-#pts_sylius_blog_plugin_article:
+#pts_sylius_article_plugin_article:
 #  resource: |
-#    alias: pts_sylius_blog_plugin.article
+#    alias: pts_sylius_article_plugin.article
 #    path: /admin/article
 #    templates: SyliusAdminBundle:Crud
 #    permission: true
-#    grid: pts_sylius_blog_plugin_article
+#    grid: pts_sylius_article_plugin_article
 #    vars:
 #        index:
 #            subheader: app.filters.subheader

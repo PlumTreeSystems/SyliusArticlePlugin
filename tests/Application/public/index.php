@@ -1,6 +1,6 @@
 <?php
 
-use Tests\PTS\SyliusBlogPlugin\Application\Kernel;
+use Tests\PTS\SyliusArticlePlugin\Application\Kernel;
 use Symfony\Component\Debug\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
