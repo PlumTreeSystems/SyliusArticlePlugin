@@ -1,12 +1,12 @@
 {
-    "name": "pts/sylius-blog-plugin",
+    "name": "plumtreesystems/sylius-article-plugin",
     "type": "sylius-plugin",
     "keywords": ["sylius", "sylius-plugin"],
-    "description": "Plum Tree Systems blog plugin for Sylius.",
+    "description": "Plum Tree Systems article plugin is an extension for BitBagSyliusCmsPlugin. It adds your sections to the menu of your app",
     "license": "MIT",
     "require": {
         "php": "^7.2",
-
+        "bitbag/cms-plugin": "^2.3",
         "sylius/sylius": "^1.4"
     },
     "require-dev": {
@@ -44,8 +44,8 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "PTS\\SyliusBlogPlugin\\": "src/",
-            "Tests\\PTS\\SyliusBlogPlugin\\": "tests/"
+            "PTS\\SyliusArticlePlugin\\": "src/",
+            "Tests\\PTS\\SyliusArticlePlugin\\": "tests/"
         }
     },
     "autoload-dev": {
